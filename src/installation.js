@@ -27,17 +27,17 @@ export default class Installation {
       throw new Error('Location doesn\'t exists!');
     }
     if (! fs.existsSync(location + path.sep + 'package.json')) {
-      throw new Error('Location given is no valid package folder.');
+      throw new Error('Location is not a valid ManiaJS directory! (no valid package folder, missing package.json, maybe init first?)');
     }
     if (! fs.existsSync(location + path.sep + 'maniajs.js')) {
-      throw new Error('Location has no maniajs.js file.');
+      throw new Error('Location is not a valid ManiaJS directory! (has no maniajs.js file)');
     }
 
     // Try to load package.
     this.pkg = JSON.parse(fs.readFileSync(location + path.sep + 'package.json'));
 
     if (this.pkg.name !== 'maniajs-server') {
-      throw new Error('Package in location given is invalid!');
+      throw new Error('Location is not a valid ManiaJS directory! (Package in location given is invalid!)');
     }
   }
 
