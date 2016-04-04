@@ -14,10 +14,10 @@
     "maniajs": "./bin/maniajs.js"
   },
   "bugs": {
-    "url": "https://github.com/ManiaJS/plugins/issues"
+    "url": "https://github.com/ManiaJS/maniajs-cli/issues"
   },
   "license": "ISC",
-  "repository": "https://github.com/ManiaJS/plugins/tree/master/packages/maniajs-cli",
+  "repository": "https://github.com/ManiaJS/maniajs-cli",
   "engines": {
     "node": ">=4.0.0"
   },
