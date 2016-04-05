@@ -23,6 +23,7 @@ let installation = new Installation(directory);
 
 let packageInfos = [];
 let packageInstall = [];
+
 // Fetch recent package from register.
 packages.reduce((promise, name) => {
   return promise.then(() => {
