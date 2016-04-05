@@ -13,4 +13,7 @@ let program = new Command()
   .command('update', 'Update ManiaJS Core and Plugins to next minor version')
   .command('upgrade', 'Upgrade ManiaJS Core and Plugins to next big update (can break things)')
   .command('list', 'List current ManiaJS Core and Plugins entries')
+  .command('start', 'Start server in current directory')
+  .command('stop', 'Stop server in current directory')
+  .command('restart', 'Restart server in current directory')
   .parse(process.argv);
