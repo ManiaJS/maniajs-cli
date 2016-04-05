@@ -19,7 +19,7 @@ program
   .parse(process.argv);
 
 let versionToInstall = program.installVersion || null;
-let folder = path.resolve(program.args.length ? program.args[0] : __dirname + '/');
+let folder = path.resolve(program.args.length ? program.args[0] : process.cwd() + '/');
 let templateFolder = path.resolve(__dirname + '/../../template/');
 
 // Check folder (if not exists, also okay, will create).

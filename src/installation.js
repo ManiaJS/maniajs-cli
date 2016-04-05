@@ -101,6 +101,16 @@ export default class Installation {
     });
   }
 
+  /**
+   * Search for package.json online.
+   * @param {string} name
+   * @param {string} [version] version string or 'latest'.
+   */
+  onlinePackage (name, version) {
+    version = version || 'latest';
+    return pkgFetcher(name, version);
+  }
+
 
   savePackage () {
     fs.writeFileSync(this.location + path.sep + 'package.json', JSON.stringify(this.pkg, null, '  '), 'utf8');
