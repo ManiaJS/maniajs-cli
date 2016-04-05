@@ -102,6 +102,26 @@ export default class Installation {
   }
 
   /**
+   * Execute `npm update` in directory.
+   * @returns {Promise}
+   */
+  update () {
+    return new Promise((resolve, reject) => {
+      let process = exec('npm update', {
+        cwd: this.location
+      }, (err, stdout, stderr) => {
+        if (err || stderr) {
+          return reject(err || new Error(stderr));
+        }
+        return resolve();
+      });
+      process.stdout.on('data', (msg) => {
+        console.log(colors.grey(msg));
+      });
+    });
+  }
+
+  /**
    * Search for package.json online.
    * @param {string} name
    * @param {string} [version] version string or 'latest'.
