@@ -8,6 +8,7 @@ import * as packageInfo from './../package';
 let program = new Command()
   .version(packageInfo.version)
   .command('init [folder]', 'Init ManiaJS environment in current folder or provided folder')
+  .command('migrate [folder]', 'Migrate from existing controller (database). Give folder of ManiaJS installation')
   .command('install [name]', 'Install ManiaJS plugin in current folder')
   .command('uninstall [name]', 'Uninstall ManiaJS plugin in current folder')
   .command('update', 'Update ManiaJS Core and Plugins to next minor version')
