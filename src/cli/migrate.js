@@ -28,7 +28,7 @@ var questions = [
   }
 ];
 
-inquirer.prompt(questions, (answers) => {
+inquirer.prompt(questions).then((answers) => {
   let manager = new Migration(answers.sourceType);
 
   manager.wizard().then(() => {

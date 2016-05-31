@@ -185,7 +185,7 @@ var questions = [
   }
 ];
 
-inquirer.prompt(questions, (answers) => {
+inquirer.prompt(questions).then((answers) => {
   answers.dbType = answers.dbType.toLowerCase();
   answers.game = answers.game.toLowerCase();
   answers.dbStorage = answers.dbStorage || '';
